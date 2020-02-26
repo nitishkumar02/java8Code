@@ -1,0 +1,50 @@
+Class inside another Class is called Inner Class
+
+without existing one type of Object, if there is no chance of existing another type of object, then we should go for Inner class
+ex.1 University and department
+
+class university
+{
+   class department
+    {
+     
+     }
+ }
+ complie: javac university.java
+ result: university.class , university$department.class
+ 
+ ex.2 Car And Engine
+ 
+ class Car
+ {
+    class Engine
+    {
+      
+     }
+  } 
+  
+  2. Based on position of declaration and behaviour, all Inner classes are divided into Four types:
+    1. Normal or Regular Inner classes
+    2. method local inner classes
+    3. Anonaymous inner classes
+    4. static nested classes
+    
+Anonymous Inner Classes ......
+  Inner Class without name
+  purpose - instant use or say one time usage
+  
+  Based on declaration and behaviour , three types of Anonymous inner class
+  1.Anonymous inner class that extend a class
+  2.Anonymous inner class that implements an Interface
+  3.Anonymous inner class that defined inside arguments
+  
+  
+  
+  
+    
+    
+     
+ 
+ 
+ 
+ 
