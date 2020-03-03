@@ -1,0 +1,16 @@
+MultiTasking: Executing several task Simultaneously
+Types of MultiTasking:
+1. Process Based MultiTasking
+2. Thread based multiTasking
+
+1. Process Based MultiTasking :
+Executing Several task Simultaneously , where each Task is separate independent Program(process).
+e.g typing in editor, while listning music ..etc
+
+2. Thread based multiTasking:
+ Executing Several task Simultaneously , where each Task is separate independent part of the same program.
+ Each Independent Part is called Thread.
+
+ Ways to Define A Thread:
+ 1. By Extending Thread Class
+ 2. By Implementing Runnable InterFace
