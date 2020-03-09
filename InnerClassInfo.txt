@@ -38,6 +38,69 @@ Anonymous Inner Classes ......
   2.Anonymous inner class that implements an Interface
   3.Anonymous inner class that defined inside arguments
   
+  1.Example: Anonymous inner class that extend Concrete class
+  class Test
+  {
+  }
+  
+  Test t = new Test
+  {
+  
+  }
+  
+  2. Example: Anonymous Inner class that Extends Abstract class
+  
+  abstract class Test
+  {
+  
+  }
+  
+  Test t = new Test()
+  {
+  
+  }
+  
+  3. Example: Anonymous Innner Class That implements an Interface Which Contains Multiple Methods
+  
+  inetrface Test
+  {
+   public void m1();
+   public void m2();
+   public void m3();
+   }
+   
+   Test t = new Test()
+   {
+    public void m1();
+    public void m2();
+    public void m3();
+    }
+    
+    4. Example: Anonymous Innner Class That implements an Interface Which Contains Single Abstract Methods
+    interface Test
+    {
+    public void m1();
+    }
+    
+    Test t = new Test()
+    {
+   
+   public void m1()
+    {
+      System.out.println("Hey");
+    
+    }
+    }
+    ... Test t = ()->System.out.println("Hey");
+    
+    
+    
+    
+    
+  
+  
+  
+  
   
   
   
