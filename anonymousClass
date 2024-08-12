@@ -1,0 +1,42 @@
+class Parent1
+{
+    public void m1()
+    {
+        System.out.println("print Parent");
+    }
+    public void m2()
+    {
+        System.out.println("2nd parent method");
+    }
+}
+
+class Parent2
+{
+    public void m1()
+    {
+        System.out.println("print Parent");
+    }
+    public void m2()
+    {
+        System.out.println("22nd parent method");
+    }
+}
+public class AnonymousClass {
+
+    Parent2 obj1 = new Parent2(){
+        public void m1()
+        {
+            System.out.println("print child");
+        }
+    }; // it's a statement , the whole thing ,so semicolon
+}
+class Demo123
+{
+    public static void main(String[] args) {
+        AnonymousClass obj2 = new AnonymousClass();
+        obj2.obj1.m1();
+        obj2.obj1.m2();
+
+    }
+
+}
