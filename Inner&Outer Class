@@ -1,0 +1,41 @@
+public class Outer {
+    static int x=10;
+    protected static class Innner
+    {
+        void if1display()
+        {
+            System.out.println(" inner hey " +x);
+        }
+    }
+
+class Innner2
+    {
+        void if2display()
+        {
+            System.out.println(" non static inner hey " +x);
+        }
+    }
+    public void displayouter()
+
+    {
+        System.out.println("outer display");
+    }
+}
+class Example
+{
+    public static void main(String[] args)
+    {
+        //static does not depend upon object of class
+        //we can access them by Classname.static_member name
+        // so ,below is the creation of inner class object
+        Outer.Innner o2 = new Outer.Innner();//for static inner class
+        o2.if1display();
+
+        Outer o1 = new Outer();
+        o1.displayouter();
+
+        //if class is non-static ,it means ,object is required to access that class member
+        Outer.Innner2 inr = o1.new Innner2();
+        inr.if2display();
+    }
+}
