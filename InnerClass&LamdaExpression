@@ -1,0 +1,82 @@
+public class MyRunnable implements Runnable{
+
+    @Override
+    public void run() {
+        for (int i = 0; i <4 ; i++) {
+            System.out.println("abc");
+        }
+    }
+
+
+}
+class DemoRun1
+{
+    public static void main(String[] args) {
+        MyRunnable obj = new MyRunnable();
+
+        Thread th = new Thread(obj);
+        th.start();
+    }
+}
+ ----  With Lambda Expression ------------------
+
+class DemoRun1
+{
+    public static void main(String[] args) 
+{
+        Runnable r2 = ()->{
+            for (int i = 0; i <4 ; i++)
+            {
+            System.out.println("abcd");
+        }
+        };
+
+        Thread th1 = new Thread(r2);
+        th1.start();
+ }
+}
+
+--------- With Anynymous Inner class----------------
+
+
+class DemoRun1
+{
+    public static void main(String[] args) 
+   {
+
+         // anyonymous inner class , implementing Runnable Interface
+        Runnable r2 = new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                for (int i = 0; i <4 ; i++)
+                {
+                    System.out.println("abcd");
+                }
+            }
+        };
+
+        Thread th1 = new Thread(r2);
+        th1.start();
+   }
+}
+
+
+-------------------- Anynymous Inner class Lambda Function ---------------
+class DemoRun1
+{
+public static void main(String[] args) 
+{
+  Thread th3 = new Thread( ()->
+    {       
+	for (int i = 0; i <4 ; i++)
+        {
+            System.out.println("abcdefgh");
+        }
+   }
+);
+        th3.start();
+}
+}
+
