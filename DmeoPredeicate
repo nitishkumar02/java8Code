@@ -1,0 +1,17 @@
+import java.util.function.Predicate;
+
+public class DmeoPredeicate {
+    public static void main(String[] args) {
+        Predicate<String> s = s1 -> s1.charAt(0)=='k';
+        String[] ar = {"nitish","kumar","kunal"};
+        for (String s2:ar
+             ) {
+            if(s.test(s2))
+            {
+                System.out.println(s2);
+            }
+
+        }
+
+    }
+}
