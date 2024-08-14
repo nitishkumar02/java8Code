@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+class user
+{
+    public user(String userName, String password)
+    {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    String userName;
+    String password;
+
+}
+
+
+
+public class UserAuthentication
+{
+    public static void main(String[] args)
+    {
+        Predicate<user> u = User-> User.userName.equals("nitish") && User.password.equals("kumar");
+
+        //get the Usrname and password
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Username :");
+        String name = sc.next();
+        System.out.println("Enter Password :");
+        String passwo = sc.next();
+
+        //create object
+        user u1 = new user(name,passwo);
+
+        //check
+        if(u.test(u1))
+        {
+            System.out.println("user is correct");
+        }
+        else
+        {
+            System.out.println("User is invalid");
+        }
+
+    }
+}
