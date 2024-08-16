@@ -1,0 +1,8 @@
+import java.util.function.Predicate;
+
+public class PredicateEqualMethod {
+    public static void main(String[] args) {
+        Predicate pse =  Predicate.isEqual("nitish");
+        System.out.println(pse.test("nitish"));
+    }
+}
