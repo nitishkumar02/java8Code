@@ -1,0 +1,16 @@
+import java.util.function.Function;
+
+public class FunctionChainningExample {
+    public static void main(String[] args) {
+        Function<Integer,Integer> sum = I-> I+I;
+        Function<Integer,Integer> cube = I-> I*I*I;
+
+        //do chaning
+        System.out.println("Sum then Multiply : " + sum.andThen(cube).apply(2));
+        System.out.println(" Multiply then Sum  : " + sum.compose(cube).apply(2));
+        Function<String,String> st = Function.identity();
+        String ab = st.apply("nitish");
+        System.out.println(ab);
+    }
+}
+  
